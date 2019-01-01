@@ -5,7 +5,7 @@
 
 %include	"pm.inc"	; 常量, 宏, 以及一些说明
 
-org	0100h
+org	07c00h
 	jmp	LABEL_BEGIN
 
 [SECTION .gdt]
@@ -23,7 +23,7 @@ GdtPtr		dw	GdtLen - 1	; GDT界限
 ; GDT 选择子
 SelectorCode32		equ	LABEL_DESC_CODE32	- LABEL_GDT
 SelectorVideo		equ	LABEL_DESC_VIDEO	- LABEL_GDT
-; END of [SECTION .gdt]
+; END of [SECTION .gdrt]
 
 [SECTION .s16]
 [BITS	16]
